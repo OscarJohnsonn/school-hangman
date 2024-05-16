@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="small.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" media="(min-width: 1001px)" href="styles.css">
+</head>
+</head>
+<body class="dark-mode">
+    <h1 id="title">Hangman</h1>
+
+    <div id="menu">
+        <button id="start">Start</button>
+        <button id="restart">Reset</button>
+        <h4>Custom Wordset:</h4>
+        <textarea id="customwordset" placeholder="Empty = default words, comma separated no spaces"></textarea>
+        <button id="darkModeToggle">Toggle Light Mode<img src="assets/pepeflash.webp" alt=""></button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <div id="keyboard" class="keyboard-grid">
+
+            <button class="key" data-key="a">a</button>
+            <button class="key" data-key="b">b</button>
+            <button class="key" data-key="c">c</button>
+            <button class="key" data-key="d">d</button>
+            <button class="key" data-key="e">e</button>
+            <button class="key" data-key="f">f</button>
+            <button class="key" data-key="g">g</button>
+            <button class="key" data-key="h">h</button>
+            <button class="key" data-key="i">i</button>
+            <button class="key" data-key="j">j</button>
+            <button class="key" data-key="k">k</button>
+            <button class="key" data-key="l">l</button>
+            <button class="key" data-key="m">m</button>
+            <button class="key" data-key="n">n</button>
+            <button class="key" data-key="o">o</button>
+            <button class="key" data-key="p">p</button>
+            <button class="key" data-key="q">q</button>
+            <button class="key" data-key="r">r</button>
+            <button class="key" data-key="s">s</button>
+            <button class="key" data-key="t">t</button>
+            <button class="key" data-key="u">u</button>
+            <button class="key" data-key="v">v</button>
+            <button class="key" data-key="w">w</button>
+            <button class="key" data-key="x">x</button>
+            <button class="key" data-key="y">y</button>
+            <button class="key" data-key="z">z</button>
+
+        </div>
+
+        <div id="centerstuff">
+            <p id="guessedWords"></p>
+            <p id="score">0/10</p>
+            <p id="health"></p>
+            <p id="hint"></p>
+        </div>
+
+
+        <img class="hangman-image" id="hangman" src="" alt="Hangman">
+
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="modal-content"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
